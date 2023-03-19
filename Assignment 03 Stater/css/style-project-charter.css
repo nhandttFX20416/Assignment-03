@@ -1,0 +1,51 @@
+li {
+  list-style-type: none;
+}
+
+i {
+padding: 20px 30px;
+font-size: 150%;
+}
+
+.container {
+  background-color: rgb(242, 254, 255);
+}
+
+.details {
+  padding-left: 20px;
+}
+
+.details h3 {
+  font-size: 18px;
+}
+
+.time {
+  height: 50px;
+  width: 50px;
+  padding: 10px 15px;
+  background-color: #b786e4;
+  border: solid 5px rgb(127, 127, 127);
+}
+
+.project {
+  border-bottom: dashed 1px rgb(155, 202, 249);
+}
+
+/* Tạo border */
+.level-1, .level-2 {
+    border: solid 10px rgb(4, 24, 250);
+}
+
+
+
+/* 
+Tablets and under
+@media (max-width: 768px) {
+
+};
+
+
+Mobie
+@media (max-width: 500px) {
+  
+}; */
