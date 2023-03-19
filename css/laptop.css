@@ -1,0 +1,464 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+
+#banner {
+  /* width: 1170px; */
+  background-image: url(./../images/bannerOriginal.jpg);
+  background-color: #199cdb;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  /* background-position: center; */
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  text-align: center;
+  color: white;
+}
+
+/* Canh giữa nội dung lên trên hình banner */
+.banner-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+}
+
+.banner-info > span {
+  font-size: 14px;
+}
+
+/* Tạo thanh tiêu đề */
+#nav-bar {
+  text-align: center;
+}
+
+#nav-bar .container {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-details {
+  padding: 0 20px;
+  text-transform: uppercase;
+  list-style: none;
+  line-height: 77px;
+  border-left: 1px solid rgb(188, 188, 188);
+}
+
+div.nav-details:last-child {
+  border-right: 1px solid rgb(188, 188, 188);
+}
+
+
+/* CHỗ này quên cách sửa 
+#nav-bar .container :last-child {
+  border-right: 1px solid rgb(188, 188, 188);
+} */
+
+/* Em sử dụng các pseudo-classes để định dạng lại link */
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+/* canh giữa phần tên */
+.nav-name {
+  display: inline-block;
+  grid-column: 3 / 5;
+  padding: 10px 20px;
+}
+
+.nav-name p {
+  margin: 0;
+}
+
+.name {
+  font-size: 24px;
+}
+
+.career {
+  color: grey;
+  font-size: 14px;
+}
+
+i {
+  color: #199cdb;
+}
+/* tạo nội dung phần thông tin cá nhân và mục tiêu */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.target {
+  background-color: rgb(243, 243, 243);
+  padding: 20px 10% 40px 30%;
+  font-size: 14px;
+}
+
+.target p {
+  color: #616161;
+}
+.section-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+.personal-info {
+  background-color: rgb(227, 227, 227);
+  padding: 20px 20px 40px 40px;
+}
+
+.personal-info li {
+  list-style-type: none;
+}
+
+.personal-info ul {
+  padding: 0;
+  color: #616161;
+}
+
+.per-icon {
+  padding-top: 40px;
+}
+
+/* Tạo nội dung phần kinh nghiệm, học vấn, ... */
+#job-info .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Chia grid thành 3 cột có chiều cao khác nhau bằng grid-template-areas và height: auto */
+  /* grid-template-areas:"job-col-1 job-col-2 job-col-3";  */
+  gap: 40px;
+
+  margin: 20px auto;
+}
+/* Khi làm ass2 thì hình yêu cầu có khác chút so với yêu cầu hiện tại của ass2 nên em thay đổi lại một chút. Ban đầu em chia làm 3 cột riêng biệt vì để không tạo thành hàng ngang như trong grid bình thường
+
+
+.job-col-1 {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 40px;
+}
+
+.job-col-2 {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 40px;
+    height: fit-content;
+}
+
+.job-col-3 {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 40px;
+    height: fit-content;
+} */
+
+.job-details {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  /* grid-template-rows: 100px auto; */
+  border: 1px solid #bababa;
+  align-items: center;
+}
+
+.title-icon {
+  font-size: 40px;
+  color: grey;
+}
+
+.job-title {
+  margin: 10px 0;
+  height: 80px;
+}
+.job-details h1 {
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+.job-content {
+  grid-column: 1 / span 2;
+  padding: 0 30px 0px 30px;
+  align-items: center;
+  align-self: start;
+  margin-bottom: 20px;
+}
+
+.job-content h2 {
+  font-size: 18px;
+  /* margin-bottom: 5px; */
+}
+
+/* Đổi màu bullet list */
+.job-content ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+.job-content li {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.job-content li:before {
+  content: "•";
+  position: absolute;
+  left: -1em;
+  color: #199cdb;
+  font-size: 18px;
+}
+
+/* Tạo nội dung phần sở thích */
+.hobby {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  justify-items: center;
+  row-gap: 10px;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #199cdb;
+  vertical-align: middle;
+}
+
+.circle > i {
+  padding-top: 15px;
+}
+
+/* Tạo nội dung phần Ngôn ngữ và Kỹ năng. Hai phần này có format tương tự nhau nên em cùng để class là level để giảm dòng code */
+.language p,
+.skill p {
+  margin-bottom: 0;
+}
+
+.level-1 {
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+  border-bottom: 2px solid #199cdb;
+}
+
+.level-2 {
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+  border-bottom: 2px solid #199cdb;
+}
+
+.level-3 {
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+  border-bottom: 2px solid #a1a2a2;
+}
+
+.skill-1 > .level-2 {
+  border-bottom: 2px solid #a1a2a2;
+}
+
+.skill-2 > .level-2 {
+  border-bottom: 2px solid #a1a2a2;
+}
+
+.skill-4 > .level-2 {
+  border-bottom: 2px solid #a1a2a2;
+}
+
+/* Nội dung phần chứng chỉ */
+#certificate .container {
+  padding: 30px auto;
+}
+
+.certificate {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* .cert {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  column-gap: 40px;
+  padding: 40px 0;
+} */
+
+.cert {
+  display: flex;
+  padding-bottom: 40px;
+}
+
+.cert > img {
+  width: 200px;
+  padding-top: 10px;
+}
+
+.cert-content {
+  padding-top: 10px;
+  padding-left: 40px;
+}
+
+.cert p {
+  color: #616161;
+  margin-bottom: 5px;
+}
+
+.certificate h2 {
+  font-size: 18px;
+}
+
+.certificate > .Web {
+  border-bottom: solid 1px #d6c08d;
+}
+
+.certificate > .JS {
+  border-bottom: solid 1px #d6c08d;
+}
+
+
+.JS img {
+  border-left: solid 1px #d6c08d;
+  padding-left: 20px;
+}
+
+/* dự án */
+#project .container {
+  margin: 30px auto;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  padding-top: 10px;
+}
+
+.project img {
+  width: 100%;
+}
+
+.pro h2 {
+  border: 1px solid #bababa;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.pro .info {
+  border-left: 1px solid #bababa;
+  border-right: 1px solid #bababa;
+  padding: 10px;
+  color: #616161;
+}
+
+.project span {
+  padding-right: 10px;
+}
+
+.project .year {
+  color: white;
+  background-color: #199cdb;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.pro table,
+tr {
+  border-collapse: collapse;
+  border: 1px solid #bababa;
+  color: #616161;
+}
+
+.pro td {
+  padding: 10px 0px 10px 10px;
+}
+/* điều chỉnh chiều rộng của table */
+.pro .c1 {
+  width: 80px;
+}
+
+.pro .c2 {
+  width: 1fr;
+}
+
+.pro i {
+  color: #616161;
+}
+
+
+/* Footer */
+.footer > li {
+  list-style: none;
+  display: inline-block;
+  padding: 30px;
+}
+
+.footer i {
+  font-size: 24px;
+}
+
+.footer {
+  text-align: center;
+  padding-left: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #616161;
+}
+/* 9.Chức năng ẩn thông tin cá nhân*/
+/* .hidden {
+  display: none;
+} */
+
+/* 10. Chức năng ẩn thông tin nghề nghiệp */
+/* Tạo nút viewmore */
+.btn-view-more {
+  background-color: #f4eda7; /* Green */
+  border: none;
+  color: black;
+  padding: 5px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 50px;
+  margin-left: 30px;
+}
